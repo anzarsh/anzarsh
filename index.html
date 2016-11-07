@@ -1,10 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Anzar</title>
+	<meta charset="UTF-8">
+	<title>Anzar Shchumakhua</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>My first personal website</h1>
-	<p>Hi, Isaac Mendez!</p>
+	<div class="az-slider">
+		<input type="radio" name="az-radio" id="az-radio1" class="az-radio1" data-val="0">
+		<input type="radio" name="az-radio" id="az-radio2" class="az-radio2" data-val="1">
+		<input type="radio" name="az-radio" id="az-radio3" class="az-radio3" data-val="2">
+		<div class="az-slide az-slide1 az-animate1">
+			<div class="az-item1">
+				<span class="az-jet">just</span>
+			</div>
+		</div>
+		<div class="az-slide az-slide2 az-animate2">
+			<div class="az-item2">
+				<span class="az-jet">enjoy</span>
+			</div>
+		</div>
+		<div class="az-slide az-slide3 az-animate3">
+			<div class="az-item3">
+				<span class="az-jet">this</span>
+			</div>
+		</div>
+		<div class="az-controls">
+			<label class="az-dot az-dot1" for="az-radio1"></label>
+			<label class="az-dot az-dot2" for="az-radio2"></label>
+			<label class="az-dot az-dot3" for="az-radio3"></label>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// alert($('.az-slide1').css('left'));
+			
+			// alert(width);
+			var length = $('.az-slide').length;
+			$('input[type=radio]').change(function(){
+				var width = parseInt($('.az-slide1').css('width'));
+				var left1 = $('.az-slide1').css('left');
+				$('.az-slide1').css('left', left1);
+				var left2 = $('.az-slide2').css('left');
+				$('.az-slide2').css('left', left2);
+				var left3 = $('.az-slide3').css('left');
+				$('.az-slide3').css('left', left3);
+				$('.az-slide').removeClass('az-animate1 az-animate2 az-animate3');
+
+				var val = parseInt($(this).attr("data-val"));
+				for(var i = 0; i<length; i++){
+					var left = ((i-val)*width);
+					$('.az-slide'+(i+1)).animate({'left': left}, 2000);
+				}
+			});
+		});
+	</script>
 </body>
 </html>

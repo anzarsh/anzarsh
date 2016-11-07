@@ -1,0 +1,149 @@
+html, body{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+head{
+	display: none;
+}
+
+
+@keyframes slide0{
+	0%{
+		left: -100%;
+	}
+	100%{
+		left: -200%;
+	}
+}
+@keyframes slide1{
+	0%{
+		left: 0%;
+	}
+	100%{
+		left: -100%;
+	}
+}
+@keyframes slide2{
+	0%{
+		left: 100%;
+	}
+	100%{
+		left: 0%;
+	}
+}
+@keyframes slide3{
+	0%{
+		left: 200%;
+	}
+	100%{
+		left: 100%;
+	}
+}
+.az-slider{
+	width: 100%;
+	height: 100%;
+	min-width: 200px;
+	min-height: 100px;
+	position: relative;
+	overflow: hidden;
+}
+.az-slide1{
+	position: absolute;
+	top: 0px;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.az-slide2{
+	position: absolute;
+	top: 0px;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.az-slide3{
+	position: absolute;
+	top: 0px;
+	left: 200%;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.az-animate1{
+	animation: slide1 2s ease-in-out 2s, slide0 2s ease-in-out 6s;
+	animation-fill-mode: forwards, forwards;
+}
+.az-animate2{
+	animation: slide2 2s ease-in-out 2s, slide1 2s ease-in-out 6s;
+	animation-fill-mode: forwards, forwards;
+}
+.az-animate3{
+	animation: slide3 2s ease-in-out 2s, slide2 2s ease-in-out 6s;
+	animation-fill-mode: forwards, forwards;
+}
+.az-controls{
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.az-dot{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #161616;
+	margin: 0 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.5s ease-in-out;
+}
+input[type="radio"]{
+	display: none;
+}
+.az-radio1:checked ~ .az-controls .az-dot1{
+	background: #161616;
+}
+.az-radio2:checked ~ .az-controls .az-dot2{
+	background: #161616;
+}
+.az-radio3:checked ~ .az-controls .az-dot3{
+	background: #161616;
+}
+
+.az-item1{
+	width: 100%;
+	height: 100%;
+	background: #388E3C;
+	text-align: center;
+}
+
+.az-item2{
+	width: 100%;
+	height: 100%;
+	background: #689F38;
+	text-align: center;
+}
+.az-item3{
+	width: 100%;
+	height: 100%;
+	background: #AFB42B;
+	text-align: center;
+}
+.az-item1:before, .az-item2:before, .az-item3:before{
+	content: '';
+	width: 0px;
+	height: 100%;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.az-jet{
+	display: inline-block;
+	color: #fff;
+	font-size: 32px;
+}
