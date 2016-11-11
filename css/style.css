@@ -169,10 +169,10 @@ text {
 /*}*/
 
 .text--line {
-  line-height: 50%;
+  line-height: 100%;
 }
 .text--line2 {
-  line-height: 75%;
+  line-height: 100%;
 }
 .text--line3 {
   line-height: 100%;
@@ -182,7 +182,7 @@ svg {
   top: 0px;
   left: 0px;
   /*background-size: .12em 100%;*/
-  font: 8em/1 "Times New Roman";
+  font: 127px "Times New Roman";
   width: 100%;
   height: 100%;
 }
@@ -227,7 +227,7 @@ svg {
 	animation-delay: 3s;
 }
 @-webkit-keyframes stroke-offset {
-25%{
+	25%{
 		fill: transparent;
 	}
 	35%{
@@ -279,10 +279,20 @@ svg {
 
 .circle1{
 	cy:30px;
+	-webkit-animation: drop 1.2s linear;
+	-webkit-animation-fill-mode: both;
 	animation: drop 1.2s linear;
 	animation-fill-mode: both;
 }
 
+@-webkit-keyframes drop{
+	from{
+		cy:30px;
+	}
+	to{
+		cy:128px;
+	}
+}
 @keyframes drop{
 	from{
 		cy:30px;
@@ -294,10 +304,20 @@ svg {
 
 .circle2{
 	cy:30px;
+	-webkit-animation: drop2 2.3s linear;
+	-webkit-animation-fill-mode: both;
 	animation: drop2 2.3s linear;
 	animation-fill-mode: both;
 }
 
+@-webkit-keyframes drop2{
+	from{
+		cy:30px;
+	}
+	to{
+		cy:228px;
+	}
+}
 @keyframes drop2{
 	from{
 		cy:30px;
@@ -306,13 +326,22 @@ svg {
 		cy:228px;
 	}
 }
-
 .circle3{
 	cy:30px;
+	-webkit-animation: drop3 3.2s linear;
+	-webkit-animation-fill-mode: both;
 	animation: drop3 3.2s linear;
 	animation-fill-mode: both;
 }
 
+@-webkit-keyframes drop3{
+	from{
+		cy:30px;
+	}
+	to{
+		cy:328px;
+	}
+}
 @keyframes drop3{
 	from{
 		cy:30px;
