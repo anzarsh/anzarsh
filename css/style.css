@@ -120,6 +120,7 @@ input[type="radio"]{
 	height: 100%;
 	background: #388E3C;
 	text-align: center;
+	padding: 15px;
 }
 
 .az-item2{
@@ -293,7 +294,7 @@ svg {
 
 .circle2{
 	cy:30px;
-	animation: drop2 2.1s linear;
+	animation: drop2 2.3s linear;
 	animation-fill-mode: both;
 }
 
@@ -308,7 +309,7 @@ svg {
 
 .circle3{
 	cy:30px;
-	animation: drop3 3.1s linear;
+	animation: drop3 3.2s linear;
 	animation-fill-mode: both;
 }
 
