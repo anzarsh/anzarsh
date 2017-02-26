@@ -2,7 +2,7 @@
 
 Здесь я буду собирать полезные вещи и ссылки.
 
-Skype: anzar_sh
+Skype: anzar_sh,
 Email: anzarsh@mail.ru
 
 ## Содержание
